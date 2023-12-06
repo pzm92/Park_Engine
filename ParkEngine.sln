@@ -5,7 +5,15 @@ VisualStudioVersion = 16.0.33801.447
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor_Window", "Editor_Window\Editor_Window.vcxproj", "{1830EB9C-59B2-49B7-9163-AD99D94283E9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ParkEngine_Window", "ParkEngine_Window\ParkEngine_Window.vcxproj", "{D3E704A3-85DE-4A13-84F9-9E7DDEAA51A0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ParkEngine_SOURCE", "ParkEngine_SOURCE\ParkEngine_SOURCE.vcxitems", "{13BE8751-5BA5-4EB4-AFA5-614766CC3899}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		ParkEngine_SOURCE\ParkEngine_SOURCE.vcxitems*{13be8751-5ba5-4eb4-afa5-614766cc3899}*SharedItemsImports = 9
+		ParkEngine_SOURCE\ParkEngine_SOURCE.vcxitems*{d3e704a3-85de-4a13-84f9-9e7ddeaa51a0}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
@@ -21,6 +29,14 @@ Global
 		{1830EB9C-59B2-49B7-9163-AD99D94283E9}.Release|x64.Build.0 = Release|x64
 		{1830EB9C-59B2-49B7-9163-AD99D94283E9}.Release|x86.ActiveCfg = Release|Win32
 		{1830EB9C-59B2-49B7-9163-AD99D94283E9}.Release|x86.Build.0 = Release|Win32
+		{D3E704A3-85DE-4A13-84F9-9E7DDEAA51A0}.Debug|x64.ActiveCfg = Debug|x64
+		{D3E704A3-85DE-4A13-84F9-9E7DDEAA51A0}.Debug|x64.Build.0 = Debug|x64
+		{D3E704A3-85DE-4A13-84F9-9E7DDEAA51A0}.Debug|x86.ActiveCfg = Debug|Win32
+		{D3E704A3-85DE-4A13-84F9-9E7DDEAA51A0}.Debug|x86.Build.0 = Debug|Win32
+		{D3E704A3-85DE-4A13-84F9-9E7DDEAA51A0}.Release|x64.ActiveCfg = Release|x64
+		{D3E704A3-85DE-4A13-84F9-9E7DDEAA51A0}.Release|x64.Build.0 = Release|x64
+		{D3E704A3-85DE-4A13-84F9-9E7DDEAA51A0}.Release|x86.ActiveCfg = Release|Win32
+		{D3E704A3-85DE-4A13-84F9-9E7DDEAA51A0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
