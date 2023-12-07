@@ -1,5 +1,5 @@
 #pragma once
-#include "CommonInclude.h"
+#include "paGameObject.h"
 
 namespace pa
 {
@@ -20,9 +20,8 @@ namespace pa
 		HWND mHwnd;
 		HDC mHdc;
 
-		float mSpeed;
-		float mX;
-		float mY;
+		// 플레이어
+		GameObject mPlayer;
 	};
 }
 
