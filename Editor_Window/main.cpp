@@ -8,14 +8,16 @@
 
 #include "..\\ParkEngine_SOURCE\\paApplication.h"
 
-Application app;
-
 #define MAX_LOADSTRING 100
+
+pa::Application application;
 
 // 전역 변수:
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
+
+
 
 // WCHAR : 2바이트 짜리 변수
 
@@ -37,7 +39,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, // 프로그램의 인스턴스 
 
 
     // 깃허브 테스트
-    app.test();
+    
     // TODO: 여기에 코드를 입력합니다.
 
     // 전역 문자열을 초기화합니다.
@@ -79,6 +81,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, // 프로그램의 인스턴스 
         {
             // 메세지가 없을 경우 여기서 처리
             // 게임 로직이 들어가면 된다.
+            application.Run();
         }
     }
     //while (GetMessage(&msg, nullptr, 0, 0))
@@ -143,6 +146,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, 1280, 720, nullptr, nullptr, hInstance, nullptr);
 
+   application.Initialize(hWnd);
+
    //2개 이상의 윈도우도 생성 가능하다.
    //HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
    //    CW_USEDEFAULT, 0, 1280, 720, nullptr, nullptr, hInstance, nullptr);
@@ -203,35 +208,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
         PAINTSTRUCT ps;
         HDC hdc = BeginPaint(hWnd, &ps);
-
-        //파랑 브러쉬 생성
-        HBRUSH blueBrush = CreateSolidBrush(RGB(0, 0, 255));
-
-        //파랑 브러쉬 DC에 선택 그리고 흰색 브러쉬 반환값 반환
-        HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, blueBrush);
-
-        Rectangle(hdc, 100, 100, 200, 200);
-
-        //다시 흰색 원본브러쉬로 선택
-        SelectObject(hdc, oldBrush);
-
-        //파랑 브러쉬 삭제
-        DeleteObject(blueBrush);
-
-        HPEN redPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
-        HBRUSH oldPen = (HBRUSH)SelectObject(hdc, redPen);
-
-        Ellipse(hdc, 200, 200, 300, 300);
-
-        SelectObject(hdc, oldPen);
-        DeleteObject(redPen);        
-
-        // 기본으로 자주사용 되는 GDI오브젝트를 미리 DC안에 만들어두었는데
-        // 그 오브젝트들을 스톡 오브젝트라고 한다.
-
-        HBRUSH grayBrush = (HBRUSH)GetStockObject(GRAY_BRUSH);
-        oldBrush = (HBRUSH)SelectObject(hdc, grayBrush);
-        Rectangle(hdc, 400, 400, 500, 500);
 
         EndPaint(hWnd, &ps);
     }
