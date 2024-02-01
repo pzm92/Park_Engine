@@ -1,0 +1,30 @@
+LV00 윈도우 프로젝트 생성 및 깃허브 설치
+강의 URL : https://youtu.be/0_9LvNJXmOE?si=mURkwlZngx_DV2PC
+
+LV00 비쥬얼 스튜디오를 활용한 깃허브 사용법
+강의 URL : https://youtu.be/zdiCQRRZXNA?si=q--DsPs-sY4FpMwl
+
+LV01 WinMain 설명
+소스코드 : https://github.com/eazuooz/YamYam_Engine/commit/97513dfd7ebb9e2de4b4e1549689e52722c478eb
+수업노트 : https://typical-slug-3ef.notion.site/LV01-WinMain-cf76f982f17a4a6d9926e341e4b7d74e
+강의 URL : https://youtu.be/l8awS35y43k?si=zsYs_TyD9wrDqK4N
+
+LV02 DC란 무엇인가?
+소스코드 : https://github.com/eazuooz/YamYam_Engine/commit/8dbedeaad3379e2e088db6d065e16ac2545e92c4
+수업노트 : https://typical-slug-3ef.notion.site/LV02-DC-752ebb03a592483a80fd9dab87bba2e1
+강의 URL : https://youtu.be/b2J4I6gXaFI?si=-5E-x1dKINGm7Hto
+
+LV03 정적라이브러리 프레임워크 구성
+소스코드 : https://github.com/eazuooz/YamYam_Engine/commit/4ad3215f8d03030c9072dcf89a950ebb8295d124
+수업노트 : https://typical-slug-3ef.notion.site/LV03-3fa7181166e3434f941a9e8d715f3191
+강의 URL : https://youtu.be/zhjirGBrnEg?si=-tegfWT85zYnHZCt
+
+LV04 Application
+소스코드 : https://github.com/eazuooz/YamYam_Engine/commit/3f42e71e9ce55f2a4fe1d2c9674f99962b824e7b
+수업노트 : https://typical-slug-3ef.notion.site/LV04-Application-7462daa4b71e4f65bc6c2cc3bfe7ee1f
+강의 URL : https://youtu.be/HCfDWjkYLBs?si=h8ipwlSTb_YhaIpX
+
+LV05 GameObject
+소스코드 : https://github.com/eazuooz/YamYam_Engine/commit/d45e56a7edb5ca0d539a2904d6ab4ac06939eb3f
+수업노트 : https://typical-slug-3ef.notion.site/LV05-GameObject-c26ab2ef98384425a06d796cf833eb29?pvs=4
+강의 URL : https://youtu.be/ZwBkLu9K_Jw?si=18P2bBX3jwtTzmBZ

@@ -1,5 +1,5 @@
 #include "paApplication.h"
-
+#include "paInput.h"
 namespace pa
 {
 	Application::Application()
@@ -17,6 +17,12 @@ namespace pa
 		mHwnd = hwnd;
 		mHdc = GetDC(hwnd);
 		mPlayer.SetPosition(0.0f, 0.0f);
+		mPlayer_red.SetPosition(0.0f, 0.0f);
+
+		mComputer = new GameObject(1);
+		mComputer->SetPosition(0.0f, 0.0f);
+
+		Input::Initialize();
 	}
 
 	void Application::Run()
@@ -28,6 +34,8 @@ namespace pa
 
 	void Application::Update()
 	{		 
+		Input::Update();
+
 		mPlayer.Update();
 	}
 	void Application::LateUpdate()
@@ -36,5 +44,7 @@ namespace pa
 	void Application::Render()
 	{
 		mPlayer.Render(mHdc);
+		mPlayer_red.Render(mHdc);
+		mComputer->Render(mHdc);
 	}
 }

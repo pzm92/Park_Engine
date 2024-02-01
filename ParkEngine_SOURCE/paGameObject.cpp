@@ -1,4 +1,5 @@
 #include "paGameObject.h"
+#include "paInput.h"
 
 namespace pa
 {
@@ -11,27 +12,38 @@ namespace pa
 	}
 
 	void GameObject::Update()
-	{
-
-		if (GetAsyncKeyState(VK_LEFT) & 0x8000)
+	{//RIGHT = 0, DOWN, LEFT, UP
+		if (mode == 1)
 		{
-			mX -= 0.01f;
+			if (timer > 4.0f) timer = 0.0f;
+			timer += 0.0001f;
+			if(timer >= 0.0f && timer < 1.0f) mX += 0.1f;
+			else if (timer >= 1.0f && timer < 2.0f) mY += 0.1f;
+			else if (timer >= 2.0f && timer < 3.0f) mX -= 0.1f;
+			else if (timer >= 3.0f && timer < 4.0f) mY -= 0.1f;	
 		}
-
-		if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
+		else
 		{
-			mX += 0.01f;
-		}
+			if (Input::GetKey(eKeyCode::A))
+			{
+				mX -= 0.01f;
+			}
 
-		if (GetAsyncKeyState(VK_UP) & 0x8000)
-		{
-			mY -= 0.01f;
-		}
+			if (Input::GetKey(eKeyCode::D))
+			{
+				mX += 0.01f;
+			}
 
-		if (GetAsyncKeyState(VK_DOWN) & 0x8000)
-		{
-			mY += 0.01f;
-		}
+			if (Input::GetKey(eKeyCode::S))
+			{
+				mY -= 0.01f;
+			}
+
+			if (Input::GetKey(eKeyCode::W))
+			{
+				mY += 0.01f;
+			}
+		}		
 	}
 
 	void GameObject::LateUpdate()

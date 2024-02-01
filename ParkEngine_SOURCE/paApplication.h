@@ -1,5 +1,6 @@
 #pragma once
 #include "paGameObject.h"
+#include "paGameObject_Red.h"
 
 namespace pa
 {
@@ -22,6 +23,8 @@ namespace pa
 
 		// 플레이어
 		GameObject mPlayer;
+		GameObject* mComputer;
+		GameObject_red mPlayer_red;
 	};
 }
 

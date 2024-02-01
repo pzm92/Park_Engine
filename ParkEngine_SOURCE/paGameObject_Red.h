@@ -1,20 +1,13 @@
 #pragma once
 #include "CommonInclude.h"
 
-
-enum eAIRoad
-{
-	RIGHT = 0, DOWN, LEFT, UP	
-};
-
 namespace pa
 {
-	class GameObject
+	class GameObject_red
 	{
 	public:
-		GameObject();
-		GameObject(int mode) { this->mode = mode; }
-		~GameObject();
+		GameObject_red();
+		~GameObject_red();
 
 		void Update();
 		void LateUpdate();
@@ -32,10 +25,6 @@ namespace pa
 	private:
 		float mX;
 		float mY;
-
-		int mode = 0;
-		float timer = 0.0f;
-		eAIRoad ai;
 	};
 }
 

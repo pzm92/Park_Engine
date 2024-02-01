@@ -17,9 +17,13 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)paApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)paGameObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)paGameObject_Red.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)paInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)paApplication.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)paGameObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)paGameObject_Red.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)paInput.cpp" />
   </ItemGroup>
 </Project>
